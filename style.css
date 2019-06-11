@@ -1,0 +1,54 @@
+html{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+    background: url(fall2.jpg) no-repeat 50% 50%;
+    background-size: cover;
+    height: 100hv;
+    display: table;
+}
+
+.wrapper{
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+}
+
+path{
+    stroke: #fff;
+    fill: #fff;
+    stroke-dasharray: 3500;
+    opacity: 10;
+    animation: animate 3s cubic-bezier(.17,.67,.83,.67);
+}
+
+@keyframes animate{
+    0%{
+        opacity: 0;
+        fill: none;
+        stroke-dashoffset: 3500; 
+    }
+    30%{
+        opacity: 10;
+        fill: none;
+        stroke-dashoffset: 3500;
+    }
+    90%{
+        fill: rgba(255, 255, 255, 0);
+    }
+    100%{
+        opacity: 10;
+        fill: rgba(255, 255, 255, 1);
+        stroke-dashoffset: 0; 
+    }
+}
